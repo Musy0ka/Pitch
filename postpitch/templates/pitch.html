@@ -6,7 +6,7 @@
       <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics' + pitch.user.image_file) }}" alt="">
       <div class="media-body">
         <div class="article-metadata">
-          <a href="{{ url_for('user_pitches', username=pich.user.username) }}" class="mr-2">{{ pitch.user.username }}</a>
+          <a href="{{ url_for('user_pitch', username=pitch.user.username) }}" class="mr-2">{{ pitch.user.username }}</a>
           <small class="text-muted">{{ pitch.date_posted.strftime('%Y-%m-%d') }}</small>
           {% if pitch.user == current_user %}
             <div>
